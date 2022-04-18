@@ -7,6 +7,7 @@ import { PrivateClientsPageComponent } from './private-clients-page/private-clie
 import { ForBusinessPageComponent } from './for-business-page/for-business-page.component';
 import { VacancyPageComponent } from './vacancy-page/vacancy-page.component';
 import { HeaderComponent } from './header/header.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,9 @@ import { HeaderComponent } from './header/header.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
