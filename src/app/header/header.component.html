@@ -1,7 +1,7 @@
 
 <div class="header__title">
     <div class="header__link">
-        <h3 [routerLink]="['/']" routerLinkActive="active" >Частным клиентам</h3>
+        <h3 [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" >Частным клиентам</h3>
         <h3 [routerLink]="['/b2b']" routerLinkActive="active">Для бизнеса</h3>
         <h3 [routerLink]="['/vacancy']" routerLinkActive="active">Вакансии</h3>
     </div>
