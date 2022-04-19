@@ -10,27 +10,44 @@
     <div class="conection_contacts">
       <h1>Контактная информация:</h1>
       <form class="connection_information">
-        <input type="text" placeholder="Фамилия">
-        <input type="text" placeholder="Имя">
-        <input type="text" placeholder="Отчество">
-        <input type="number" placeholder="Телефон">
-        <input type="text" placeholder="Адресс">
+        <input type="text" placeholder="Фамилия" />
+        <input type="text" placeholder="Имя" />
+        <input type="text" placeholder="Отчество" />
+        <input type="number" placeholder="Телефон" />
+        <input type="text" placeholder="Адресс" />
       </form>
     </div>
 
     <div class="conection_technical">
       <h1>Технология подключения:</h1>
       <div class="connection_button">
-        <input type="submit" [ngStyle]="{background: clrTech == 1 ? '#EA3E2A' : '#202020'}" value="GPON" (click)="gpon($event)">
-        <input type="submit" [ngStyle]="{background: clrTech == 2 ? '#EA3E2A' : '#202020'}" value="Ethernet" (click)="ethernet($event)">
-        <input type="submit" [ngStyle]="{background: clrTech == 3 ? '#EA3E2A' : '#202020'}" value="Антенна" (click)="antenna($event)">
+        <input
+          type="submit"
+          [ngStyle]="{ background: clrTech == 1 ? '#EA3E2A' : '#202020' }"
+          value="GPON"
+          (click)="gpon($event)"
+        />
+        <input
+          type="submit"
+          [ngStyle]="{ background: clrTech == 2 ? '#EA3E2A' : '#202020' }"
+          value="Ethernet"
+          (click)="ethernet($event)"
+        />
+        <input
+          type="submit"
+          [ngStyle]="{ background: clrTech == 3 ? '#EA3E2A' : '#202020' }"
+          value="Антенна"
+          (click)="antenna($event)"
+        />
       </div>
     </div>
 
     <div class="conection_comment">
       <h1>Комментарий <span>(необязятельно)</span>:</h1>
       <form class="connection_textarea">
-        <textarea placeholder="Напиши здесь, напиши что-нибудь. можешь не писать. "></textarea>
+        <textarea
+          placeholder="Напиши здесь, напиши что-нибудь. можешь не писать. "
+        ></textarea>
       </form>
     </div>
 
@@ -39,20 +56,22 @@
       <div class="connection_passport">
         <h1>Перетащи фото сюда или выбери из папки</h1>
         <div class="connection_choose">
-          <input type="file">
+          <input type="file" />
           <h2>Выбрать</h2>
         </div>
       </div>
     </div>
 
     <div class="conection_private">
-      <h1>Отправляя Заявку, я соглашаюсь на обработку <span>моих персональных данных</span></h1>
+      <h1>
+        Отправляя Заявку, я соглашаюсь на обработку
+        <span>моих персональных данных</span>
+      </h1>
     </div>
 
     <div class="conection_button">
       <button>Отправить</button>
     </div>
-    
   </div>
 </div>
 
@@ -60,18 +79,20 @@
   <app-header></app-header>
   <div class="container__page">
     <div class="image__container">
-      <img src="./assets/img/nets_image.svg" alt="">
+      <img src="./assets/img/nets_image.svg" alt="" />
     </div>
     <div class="tarifs__container">
       <h1>Тарифы</h1>
       <div class="nets__container">
-
-        <div class="nets__block">
+        <div class="nets_block">
           <div class="nets_title">NETS 1</div>
           <div class="nets_subtitle">
             <div class="price">
               <h3>99</h3>
-              <h4>сомони <br> в месяц</h4>
+              <h4>
+                сомони <br />
+                в месяц
+              </h4>
             </div>
             <div class="speed">
               <h3>Скорость до 1 Mbit/s</h3>
@@ -79,23 +100,23 @@
             </div>
             <div class="connection">
               <span>
-                <img src="./assets/img/Ellipse 48.svg" alt="">
+                <img src="./assets/img/Ellipse 48.svg" alt="" />
                 <h3>Оборудование в аренду</h3>
               </span>
               <span>
-                <img src="./assets/img/Ellipse 48.svg" alt="">
+                <img src="./assets/img/Ellipse 48.svg" alt="" />
                 <h3>Бесплатное IPTV в подарок на 1 месяц</h3>
               </span>
               <span>
-                <img src="./assets/img/Ellipse 48.svg" alt="">
+                <img src="./assets/img/Ellipse 48.svg" alt="" />
                 <h3>Бесплатное подключение</h3>
               </span>
               <span>
-                <img src="./assets/img/Ellipse 48.svg" alt="">
+                <img src="./assets/img/Ellipse 48.svg" alt="" />
                 <h3>Безлимитый трафик</h3>
               </span>
               <span>
-                <img src="./assets/img/Ellipse 48.svg" alt="">
+                <img src="./assets/img/Ellipse 48.svg" alt="" />
                 <h3>Доступ к локальным ресурсам до 100мбит</h3>
               </span>
             </div>
@@ -104,12 +125,15 @@
             </div>
           </div>
         </div>
-        <div class="nets__block">
+        <div class="nets_block">
           <div class="nets_title">NETS 2</div>
           <div class="nets_subtitle">
             <div class="price">
               <h3>125</h3>
-              <h4>сомони <br> в месяц</h4>
+              <h4>
+                сомони <br />
+                в месяц
+              </h4>
             </div>
             <div class="speed">
               <h3>Скорость до 5 Mbit/s</h3>
@@ -117,23 +141,23 @@
             </div>
             <div class="connection">
               <span>
-                <img src="./assets/img/Ellipse 48.svg" alt="">
+                <img src="./assets/img/Ellipse 48.svg" alt="" />
                 <h3>Оборудование в аренду</h3>
               </span>
               <span>
-                <img src="./assets/img/Ellipse 48.svg" alt="">
+                <img src="./assets/img/Ellipse 48.svg" alt="" />
                 <h3>Бесплатное IPTV в подарок на 1 месяц</h3>
               </span>
               <span>
-                <img src="./assets/img/Ellipse 48.svg" alt="">
+                <img src="./assets/img/Ellipse 48.svg" alt="" />
                 <h3>Бесплатное подключение</h3>
               </span>
               <span>
-                <img src="./assets/img/Ellipse 48.svg" alt="">
+                <img src="./assets/img/Ellipse 48.svg" alt="" />
                 <h3>Безлимитый трафик</h3>
               </span>
               <span>
-                <img src="./assets/img/Ellipse 48.svg" alt="">
+                <img src="./assets/img/Ellipse 48.svg" alt="" />
                 <h3>Доступ к локальным ресурсам до 100мбит</h3>
               </span>
             </div>
@@ -142,12 +166,15 @@
             </div>
           </div>
         </div>
-        <div class="nets__block">
+        <div class="nets_block">
           <div class="nets_title">NETS 3</div>
           <div class="nets_subtitle">
             <div class="price">
               <h3>225</h3>
-              <h4>сомони <br> в месяц</h4>
+              <h4>
+                сомони <br />
+                в месяц
+              </h4>
             </div>
             <div class="speed">
               <h3>Скорость до 10 Mbit/s</h3>
@@ -155,23 +182,23 @@
             </div>
             <div class="connection">
               <span>
-                <img src="./assets/img/Ellipse 48.svg" alt="">
+                <img src="./assets/img/Ellipse 48.svg" alt="" />
                 <h3>Оборудование в аренду</h3>
               </span>
               <span>
-                <img src="./assets/img/Ellipse 48.svg" alt="">
+                <img src="./assets/img/Ellipse 48.svg" alt="" />
                 <h3>Бесплатное IPTV в подарок на 1 месяц</h3>
               </span>
               <span>
-                <img src="./assets/img/Ellipse 48.svg" alt="">
+                <img src="./assets/img/Ellipse 48.svg" alt="" />
                 <h3>Бесплатное подключение</h3>
               </span>
               <span>
-                <img src="./assets/img/Ellipse 48.svg" alt="">
+                <img src="./assets/img/Ellipse 48.svg" alt="" />
                 <h3>Безлимитый трафик</h3>
               </span>
               <span>
-                <img src="./assets/img/Ellipse 48.svg" alt="">
+                <img src="./assets/img/Ellipse 48.svg" alt="" />
                 <h3>Доступ к локальным ресурсам до 100мбит</h3>
               </span>
             </div>
@@ -180,12 +207,15 @@
             </div>
           </div>
         </div>
-        <div class="nets__block">
+        <div class="nets_block">
           <div class="nets_title">NETS 4</div>
           <div class="nets_subtitle">
             <div class="price">
               <h3>375</h3>
-              <h4>сомони <br> в месяц</h4>
+              <h4>
+                сомони <br />
+                в месяц
+              </h4>
             </div>
             <div class="speed">
               <h3>Скорость до 15 Mbit/s</h3>
@@ -193,23 +223,23 @@
             </div>
             <div class="connection">
               <span>
-                <img src="./assets/img/Ellipse 48.svg" alt="">
+                <img src="./assets/img/Ellipse 48.svg" alt="" />
                 <h3>Оборудование в аренду</h3>
               </span>
               <span>
-                <img src="./assets/img/Ellipse 48.svg" alt="">
+                <img src="./assets/img/Ellipse 48.svg" alt="" />
                 <h3>Бесплатное IPTV в подарок на 1 месяц</h3>
               </span>
               <span>
-                <img src="./assets/img/Ellipse 48.svg" alt="">
+                <img src="./assets/img/Ellipse 48.svg" alt="" />
                 <h3>Бесплатное подключение</h3>
               </span>
               <span>
-                <img src="./assets/img/Ellipse 48.svg" alt="">
+                <img src="./assets/img/Ellipse 48.svg" alt="" />
                 <h3>Безлимитый трафик</h3>
               </span>
               <span>
-                <img src="./assets/img/Ellipse 48.svg" alt="">
+                <img src="./assets/img/Ellipse 48.svg" alt="" />
                 <h3>Доступ к локальным ресурсам до 100мбит</h3>
               </span>
             </div>
@@ -220,5 +250,68 @@
         </div>
       </div>
     </div>
-  </div>
+    <div class="Equipment__container">
+      <h1>Оборудование</h1>
+      <div class="wifi__container">
+        <div class="wifi_block">
+          <div class="wifi_title">
+            <h3>GPON+ WIFI</h3>
+            <h4>ONU BDCOM GP1704-2F-E</h4>
+          </div>
+          <div class="wifi_subtitle">
+            <div class="icon">
+              <img src="./assets/img/gpon_wifi.svg" alt="" />
+            </div>
+            <div class="price">
+              <h3>450 TJS</h3>
+            </div>
+            <div class="btn">
+              <button>Подробнее</button>
+            </div>
+          </div>
+        </div> 
+       <div class="wifi_block">
+          <div class="wifi_title">
+            <h3>IPTV</h3>
+            <h4>TX3 mini</h4>
+          </div>
+          <div class="wifi_subtitle">
+            <div class="icon">
+              <img src="./assets/img/iptv.svg" alt="" />
+            </div>
+            <div class="price">
+              <h3>299 TJS</h3>
+            </div>
+            <div class="btn">
+              <button>Подробнее</button>
+            </div>
+          </div>
+        </div>
+        <div class="wifi_block">
+          <div class="wifi_title">
+            <h3>GPON</h3>
+            <h4>SNR-ONU-GPON-1G-mini-C+</h4>
+          </div>
+          <div class="wifi_subtitle">
+            <div class="icon">
+              <img src="./assets/img/gpon.svg" alt="" />
+            </div>
+            <div class="price">
+              <h3>299 TJS</h3>
+            </div>
+            <div class="btn">
+              <button>Подробнее</button>
+            </div>
+          </div>
+        </div>  
+      </div>
+    </div> 
+    
 </div>
+<div class="channelList__container">
+    <h1>Список каналов</h1>
+    .all
+</div>
+</div>
+
+ 
