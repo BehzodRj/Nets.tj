@@ -234,11 +234,11 @@
   }
 }
 
-.container { 
+.container {
   .container__page {
     width: 100%;
 
-    .image__container { 
+    .image__container {
       img {
         width: 100%;
         margin-top: 100px;
@@ -247,25 +247,29 @@
 
     .tarifs__container {
       width: 90%;
-      margin: 30px auto; 
+      margin: 30px auto;
+
       h1 {
         text-align: center;
         font-family: 'Raleway', sans-serif;
         font-weight: 500;
         font-size: 50px;
         color: #C4C4C4;
-        margin-top: 60px; 
-      } 
+        margin-top: 60px;
+      }
+
       .nets__container {
         width: 100%;
         display: flex;
         justify-content: center;
-        align-items: center;  
+        align-items: center;
+
         .nets_block {
           max-width: 340px;
           border-radius: 25px 25px 0px 0px;
-          margin-top: 20px;  
-          margin-left: 20px; 
+          margin-top: 20px;
+          margin-left: 20px;
+
           .nets_title {
             display: flex;
             justify-content: center;
@@ -388,15 +392,18 @@
               }
             }
           }
-        } 
+        }
+
         @media screen and (max-width:1400px) {
-          flex-wrap: wrap; 
+          flex-wrap: wrap;
         }
       }
     }
+
     .Equipment__container {
       width: 90%;
-      margin: 30px auto; 
+      margin: 30px auto;
+
       h1 {
         text-align: center;
         font-family: 'Raleway', sans-serif;
@@ -404,16 +411,18 @@
         font-size: 50px;
         color: #C4C4C4;
         margin-top: 60px;
-        margin-bottom: 10px; 
-      } 
+        margin-bottom: 10px;
+      }
+
       .wifi__container {
         width: 100%;
-        display: flex; 
+        display: flex;
         justify-content: center;
+
         .wifi_block {
           width: 340px;
           border-radius: 25px 25px 0px 0px;
-          margin-top: 20px; 
+          margin-top: 20px;
           margin-right: 20px;
 
           .wifi_title {
@@ -422,20 +431,22 @@
             align-items: center;
             flex-direction: column;
             background: #EA3E2A;
-            border-radius: 25px 25px 0px 0px; 
+            border-radius: 25px 25px 0px 0px;
             color: #FFFFFF;
             padding-top: 20px;
             padding-bottom: 50px;
-            h3{  
-              font-family: 'Raleway',sans-serif; 
+
+            h3 {
+              font-family: 'Raleway', sans-serif;
               font-weight: 700;
-              font-size: 36px; 
+              font-size: 36px;
               color: #FFFFFF;
             }
-            h4{
-              font-family: 'Raleway',sans-serif; 
+
+            h4 {
+              font-family: 'Raleway', sans-serif;
               font-weight: 700;
-              font-size: 18px; 
+              font-size: 18px;
               color: #FFFFFF;
             }
 
@@ -449,29 +460,34 @@
             border-radius: 25px;
             width: 100%;
             padding: 10px 0;
-            margin-top: -40px; 
-            .icon{
+            margin-top: -40px;
+
+            .icon {
               display: flex;
               justify-content: center;
               align-items: center;
               width: 100%;
-              img{
+
+              img {
                 width: 250px;
                 height: 250px;
               }
             }
+
             .price {
               display: flex;
               justify-content: center;
               align-items: center;
-              width: 100%; 
-              h3{
-                font-family: 'Raleway', sans-serif; 
+              width: 100%;
+
+              h3 {
+                font-family: 'Raleway', sans-serif;
                 font-weight: 400;
-                font-size: 48px; 
+                font-size: 48px;
                 color: #FFFFFF;
               }
-            } 
+            }
+
             .btn {
               width: 100%;
               display: flex;
@@ -479,13 +495,14 @@
               align-items: center;
               margin-top: 15px;
               margin-bottom: 10px;
+
               button {
-                border-radius: 30px;  
+                border-radius: 30px;
                 padding: 10px 50px;
-                font-family: 'Raleway', sans-serif; 
+                font-family: 'Raleway', sans-serif;
                 font-weight: 700;
-                font-size: 18px; 
-                color: #FFFFFF; 
+                font-size: 18px;
+                color: #FFFFFF;
                 cursor: pointer;
                 background: #EA3E2A;
 
@@ -496,22 +513,26 @@
               }
             }
           }
-        } 
-        @media screen and (max-width:1400px) { 
-          flex-wrap: wrap;
-          justify-content: center; 
         }
-       
+
+        @media screen and (max-width:1400px) {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
       }
-      @media screen and (max-width:500px) { 
-        h1{
+
+      @media screen and (max-width:500px) {
+        h1 {
           font-size: 35px;
         }
       }
     }
+
     .channelList__container {
       width: 90%;
-      margin: 30px auto;   
+      margin: 30px auto;
+
       h1 {
         text-align: center;
         font-family: 'Raleway', sans-serif;
@@ -519,68 +540,302 @@
         font-size: 50px;
         color: #C4C4C4;
         margin-top: 60px;
-        margin-bottom: 10px; 
-      } 
-      .channel__container { 
+        margin-bottom: 10px;
+      }
+
+      .channel__container {
         height: 700px;
         display: flex;
         justify-content: center;
         align-items: center;
         margin-top: 30px;
-        .allList{ 
+
+        .allList {
           width: 35%;
           height: 100%;
           margin-right: 20px;
           border: 1px solid #FFFFFF;
           border-radius: 30px;
-          .allList_items{
+
+          .allList_items {
             display: flex;
             justify-content: left;
-            align-items: center; 
-            height: 100px; 
+            align-items: center;
+            height: 100px;
             border-bottom: 1px solid #FFFFFF;
-            &:active{
+
+            &:active {
               transform: scale(.98);
             }
-            img{
+
+            img {
               margin-left: 20px;
             }
-            h3{
-              font-family: 'Raleway', sans-serif; 
+
+            h3 {
+              font-family: 'Raleway', sans-serif;
               font-weight: 400;
-              font-size: 24px;  
+              font-size: 24px;
               margin-left: 30px;
               color: #fff;
               cursor: pointer;
             }
+
+            &:last-child {
+              border-bottom: none;
+            }
           }
         }
-        .allChannels{ 
-          display: flex; 
+
+        .allChannels {
+          display: flex;
           justify-content: center;
           flex-wrap: wrap;
           align-items: center;
-          width: 65%;
+          max-width: 700px;
           height: 100%;
-          border: 1px solid #ccc;
+          overflow-y: scroll;
           padding: 10px;
-          img{
-            width: 180px;
-            margin-right: 10px;
-            margin-bottom: 10px;
+
+          img {
+            width: 150px;
+            margin: 10px;
           }
         }
-        @media screen and (max-width:1100px) {
-          .allList{
+
+        @media screen and (max-width:1200px) {
+          .allList {
             width: 80%;
           }
-           .allChannels{
-             display: none;
-           }
+
+          .allChannels {
+            display: none;
+          }
         }
-      } 
+        @media screen and (max-width:500px) {
+          .allList {
+            width: 90%;
+            .allList_items{
+              img{
+                width: 40px;
+                height: 40px;
+              }
+              h3{
+                font-size: 20px;
+                margin-left: 10px;
+              }
+            }
+          } 
+        }
+        @media screen and (max-width:400px) {
+          .allList {
+            width: 90%;
+            .allList_items{
+              h3{
+                font-size: 16px;
+                margin-left: 8px;
+              }
+            }
+          } 
+        }
+        @media screen and (max-width:400px) {
+          .allList { 
+
+          } 
+        }
+      }
     }
 
+    .benifits__container {
+      width: 100%;
+      margin: 50px auto;
+
+      .benifits__title {
+        width: 90%;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+
+        .title {
+          width: 40%;
+
+          h1 {
+            text-align: left;
+            margin-bottom: 10px;
+            font-family: 'Raleway', sans-serif;
+            font-style: normal;
+            font-weight: 900;
+            font-size: 60px;
+            color: #EA3E2A;
+            margin-top: 80px;
+
+          }
+        }
+
+      }
+
+      .eazyPayment {
+        width: 100%; 
+        display: flex;
+        justify-content: center;
+        position: relative;
+        .eazy_title {
+          max-width: 800px;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center; 
+          .text { 
+            width: 60%; 
+            h3 {
+              font-family: 'Raleway', sans-serif;
+              font-weight: 700;
+              font-size: 20px;
+              color: #EA3E2A;
+              text-align: center;
+            } 
+            p {
+              font-family: 'Raleway', sans-serif;
+              font-weight: 500;
+              font-size: 16px;
+              color: #C4C4C4;
+              text-align: justify;
+              margin-top: 10px;
+            }
+          }
+          .text2 { 
+            width: 60%; 
+            h3 {
+              font-family: 'Raleway', sans-serif;
+              font-weight: 700;
+              font-size: 20px;
+              color: #EA3E2A;
+              text-align: center;
+            } 
+            p {
+              font-family: 'Raleway', sans-serif;
+              font-weight: 500;
+              font-size: 16px;
+              color: #C4C4C4;
+              text-align: justify;
+              margin-top: 10px;
+            }
+          }
+          .icon{
+            img{
+              width: 100%;
+              &:last-child{
+                display: none;
+              }
+            }
+          }
+
+        }
+        .eazy_image{
+          position: absolute;
+          top: -90px;
+          img{
+            max-width: 900px;
+          }  
+        }
+        .eazy_text{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .text { 
+            width: 50%; 
+            h3 {
+              font-family: 'Raleway', sans-serif;
+              font-weight: 700;
+              font-size: 20px;
+              color: #EA3E2A;
+              text-align: center;
+            } 
+            p {
+              font-family: 'Raleway', sans-serif;
+              font-weight: 500;
+              font-size: 16px;
+              color: #C4C4C4;
+              text-align: justify;
+              margin-top: 10px;
+            }
+          }
+        }
+        
+
+      }
+      @media screen and (max-width:1100px) {
+        .benifits__title{
+          justify-content: center; 
+          width: 100%;
+          .title{
+            width: 100%;  
+            h1{
+              text-align: center;
+              font-size: 50px;
+            }
+          }
+        }
+        .eazyPayment{ 
+          flex-direction: column-reverse;
+          position: none;
+          .eazy_image{ 
+            display: none;
+          }
+          .eazy_title{   
+            flex-direction: column-reverse;
+            justify-content: center;
+            margin: auto;
+            position: relative;
+            .text_2{
+              display: none;
+            }
+            .icon{
+              margin-top: 30px; 
+              margin-bottom: 200px;
+              img{ 
+                &:last-child{
+                  display: block; 
+                  position: absolute;
+                  top: 0; 
+                  left: 0;
+                  right: 0;
+                  bottom: 0;
+                  width: 80%; 
+                  margin: auto;
+                }
+              }
+            }
+            .text{  
+              width: 90%;
+              margin: auto;
+            }
+          }
+          .eazy_text{
+            display: none;
+          }
+        }
+      }
+      @media screen and (max-width:500px) {
+        .benifits__title{ 
+          .title{ 
+            h1{ 
+              font-size: 40px;
+            }
+          }
+        } 
+      }
+      @media screen and (max-width:400px) {
+        .benifits__title{ 
+          .title{ 
+            h1{ 
+              font-size: 30px;
+            }
+          }
+        } 
+      }
+
+    }
 
   }
 }
