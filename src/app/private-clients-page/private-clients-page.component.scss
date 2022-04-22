@@ -236,8 +236,8 @@
 
 .container {
   .container__page {
-    width: 100%; 
-     
+    width: 100%;
+
     .image__container {
       img {
         width: 100%;
@@ -261,14 +261,14 @@
       .nets__container {
         width: 100%;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
 
         .nets_block {
           max-width: 340px;
           border-radius: 25px 25px 0px 0px;
           margin-top: 20px;
-          margin-left: 20px;
+          margin-right: 20px;
 
           .nets_title {
             display: flex;
@@ -395,7 +395,14 @@
         }
 
         @media screen and (max-width:1400px) {
-          flex-wrap: wrap;
+          flex-wrap: wrap; 
+          justify-content: center;
+        }
+        @media screen and (max-width:768px) {
+          flex-wrap: wrap; 
+          .nets_block{
+            margin-right: 0;
+          }
         }
       }
     }
@@ -417,7 +424,8 @@
       .wifi__container {
         width: 100%;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
+        align-items: center;
 
         .wifi_block {
           width: 340px;
@@ -519,6 +527,11 @@
           flex-wrap: wrap;
           justify-content: center;
         }
+        @media screen and (max-width:768px) { 
+          .wifi_block{
+            margin-right: 0;
+          }
+        }
 
       }
 
@@ -546,7 +559,7 @@
       .channel__container {
         height: 700px;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         margin-top: 30px;
 
@@ -592,56 +605,59 @@
           justify-content: center;
           flex-wrap: wrap;
           align-items: center;
-          max-width: 700px;
+          width: 80%;
           height: 100%;
           overflow-y: scroll;
-          padding: 10px;
+          padding: 0 10px;
 
           img {
             width: 150px;
-            margin: 10px;
+            margin-right: 20px;
+            margin-bottom: 20px;
           }
         }
 
         @media screen and (max-width:1200px) {
           .allList {
-            width: 80%;
+            width: 100%;
+            margin-right: 0;
           }
 
           .allChannels {
             display: none;
           }
         }
+
         @media screen and (max-width:500px) {
           .allList {
             width: 90%;
-            .allList_items{
-              img{
+
+            .allList_items {
+              img {
                 width: 40px;
                 height: 40px;
               }
-              h3{
+
+              h3 {
                 font-size: 20px;
                 margin-left: 10px;
               }
             }
-          } 
+          }
         }
+
         @media screen and (max-width:400px) {
           .allList {
-            width: 90%;
-            .allList_items{
-              h3{
+            width: 100%;
+            margin-right: 0;
+
+            .allList_items {
+              h3 {
                 font-size: 16px;
                 margin-left: 8px;
               }
             }
-          } 
-        }
-        @media screen and (max-width:400px) {
-          .allList { 
-
-          } 
+          }
         }
       }
     }
@@ -649,15 +665,14 @@
     .benifits__container {
       width: 100%;
       margin: 50px auto;
-
+      margin-bottom: 200px;
       .benifits__title {
         width: 90%;
         display: flex;
-        justify-content: right;
-        align-items: center;
+        justify-content: flex-end;
+        align-items: flex-end;
 
-        .title {
-          width: 40%;
+        .title { 
 
           h1 {
             text-align: left;
@@ -668,32 +683,34 @@
             font-size: 60px;
             color: #EA3E2A;
             margin-top: 80px;
-
           }
         }
-
       }
 
       .eazyPayment {
-        width: 100%; 
+        width: 100%;
         display: flex;
         justify-content: center;
         position: relative;
+
         .eazy_title {
           max-width: 800px;
           display: flex;
           justify-content: center;
           flex-direction: column;
-          align-items: center; 
-          .text { 
-            width: 60%; 
+          align-items: center;
+
+          .text {
+            width: 60%;
+
             h3 {
               font-family: 'Raleway', sans-serif;
               font-weight: 700;
               font-size: 20px;
               color: #EA3E2A;
               text-align: center;
-            } 
+            }
+
             p {
               font-family: 'Raleway', sans-serif;
               font-weight: 500;
@@ -703,15 +720,18 @@
               margin-top: 10px;
             }
           }
-          .text2 { 
-            width: 60%; 
+
+          .text2 {
+            width: 60%;
+
             h3 {
               font-family: 'Raleway', sans-serif;
               font-weight: 700;
               font-size: 20px;
               color: #EA3E2A;
               text-align: center;
-            } 
+            }
+
             p {
               font-family: 'Raleway', sans-serif;
               font-weight: 500;
@@ -721,36 +741,45 @@
               margin-top: 10px;
             }
           }
-          .icon{
-            img{
+
+          .icon {
+            img {
               width: 100%;
-              &:last-child{
+
+              &:last-child {
                 display: none;
               }
             }
           }
 
         }
-        .eazy_image{
+
+        .eazy_image {
           position: absolute;
           top: -90px;
-          img{
+          z-index: 1;
+
+          img {
             max-width: 900px;
-          }  
+          }
         }
-        .eazy_text{
+
+        .eazy_text {
           display: flex;
           justify-content: center;
           align-items: center;
-          .text { 
-            width: 50%; 
+
+          .text {
+            width: 50%;
+
             h3 {
               font-family: 'Raleway', sans-serif;
               font-weight: 700;
               font-size: 20px;
               color: #EA3E2A;
               text-align: center;
-            } 
+            }
+
             p {
               font-family: 'Raleway', sans-serif;
               font-weight: 500;
@@ -761,81 +790,98 @@
             }
           }
         }
-        
+
 
       }
+
       @media screen and (max-width:1100px) {
-        .benifits__title{
-          justify-content: center; 
+        margin-bottom: 0;
+        .benifits__title {
+          justify-content: flex-end;
+          align-items: flex-end;
           width: 100%;
-          .title{
-            width: 100%;  
-            h1{
+
+          .title {
+            width: 100%;
+
+            h1 {
               text-align: center;
               font-size: 50px;
             }
           }
-        }
-        .eazyPayment{ 
+        } 
+        .eazyPayment {
           flex-direction: column-reverse;
           position: none;
-          .eazy_image{ 
+
+          .eazy_image {
             display: none;
           }
-          .eazy_title{   
+
+          .eazy_title {
             flex-direction: column-reverse;
             justify-content: center;
             margin: auto;
             position: relative;
-            .text_2{
+
+            .text_2 {
               display: none;
             }
-            .icon{
-              margin-top: 30px; 
+
+            .icon {
+              margin-top: 30px;
               margin-bottom: 200px;
-              img{ 
-                &:last-child{
-                  display: block; 
+
+              img {
+                &:last-child {
+                  display: block;
                   position: absolute;
-                  top: 0; 
+                  top: 0;
                   left: 0;
                   right: 0;
                   bottom: 0;
-                  width: 80%; 
+                  width: 80%;
                   margin: auto;
                 }
               }
             }
-            .text{  
+
+            .text {
               width: 90%;
               margin: auto;
             }
           }
-          .eazy_text{
+
+          .eazy_text {
             display: none;
           }
         }
       }
+
       @media screen and (max-width:500px) {
-        .benifits__title{ 
-          .title{ 
-            h1{ 
+        .benifits__title {
+          .title {
+            h1 {
               font-size: 40px;
             }
           }
-        } 
+        }
       }
+
       @media screen and (max-width:400px) {
-        .benifits__title{ 
-          .title{ 
-            h1{ 
+        .benifits__title {
+          .title {
+            h1 {
               font-size: 30px;
             }
           }
-        } 
+        }
       }
 
     }
 
   }
 }
+
+
+

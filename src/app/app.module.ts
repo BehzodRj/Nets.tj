@@ -8,6 +8,7 @@ import { ForBusinessPageComponent } from './for-business-page/for-business-page.
 import { VacancyPageComponent } from './vacancy-page/vacancy-page.component';
 import { HeaderComponent } from './header/header.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     PrivateClientsPageComponent,
     ForBusinessPageComponent,
     VacancyPageComponent,
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
