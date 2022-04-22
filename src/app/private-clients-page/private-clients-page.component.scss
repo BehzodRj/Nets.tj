@@ -261,14 +261,14 @@
       .nets__container {
         width: 100%;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
 
         .nets_block {
           max-width: 340px;
           border-radius: 25px 25px 0px 0px;
           margin-top: 20px;
-          margin-left: 20px;
+          margin-right: 20px;
 
           .nets_title {
             display: flex;
@@ -395,7 +395,14 @@
         }
 
         @media screen and (max-width:1400px) {
-          flex-wrap: wrap;
+          flex-wrap: wrap; 
+          justify-content: center;
+        }
+        @media screen and (max-width:768px) {
+          flex-wrap: wrap; 
+          .nets_block{
+            margin-right: 0;
+          }
         }
       }
     }
@@ -417,7 +424,8 @@
       .wifi__container {
         width: 100%;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
+        align-items: center;
 
         .wifi_block {
           width: 340px;
@@ -519,6 +527,11 @@
           flex-wrap: wrap;
           justify-content: center;
         }
+        @media screen and (max-width:768px) { 
+          .wifi_block{
+            margin-right: 0;
+          }
+        }
 
       }
 
@@ -546,7 +559,7 @@
       .channel__container {
         height: 700px;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         margin-top: 30px;
 
@@ -592,20 +605,22 @@
           justify-content: center;
           flex-wrap: wrap;
           align-items: center;
-          max-width: 700px;
+          width: 80%;
           height: 100%;
           overflow-y: scroll;
-          padding: 10px;
+          padding: 0 10px;
 
           img {
             width: 150px;
-            margin: 10px;
+            margin-right: 20px;
+            margin-bottom: 20px;
           }
         }
 
         @media screen and (max-width:1200px) {
           .allList {
-            width: 80%;
+            width: 100%;
+            margin-right: 0;
           }
 
           .allChannels {
@@ -633,7 +648,8 @@
 
         @media screen and (max-width:400px) {
           .allList {
-            width: 90%;
+            width: 100%;
+            margin-right: 0;
 
             .allList_items {
               h3 {
@@ -649,7 +665,7 @@
     .benifits__container {
       width: 100%;
       margin: 50px auto;
-
+      margin-bottom: 200px;
       .benifits__title {
         width: 90%;
         display: flex;
@@ -657,7 +673,7 @@
         align-items: center;
 
         .title {
-          width: 40%;
+          width: 45%;
 
           h1 {
             text-align: left;
@@ -780,6 +796,7 @@
       }
 
       @media screen and (max-width:1100px) {
+        margin-bottom: 0;
         .benifits__title {
           justify-content: center;
           width: 100%;
@@ -792,8 +809,7 @@
               font-size: 50px;
             }
           }
-        }
-
+        } 
         .eazyPayment {
           flex-direction: column-reverse;
           position: none;
@@ -868,243 +884,4 @@
 }
 
 
-.footer__page {
-  width: 100%;
-  margin-top: 200px;
-  background: #000;
 
-  .footer__container {
-    width: 90%;
-    margin: auto;
-    display: flex;
-    padding: 30px 0;
-
-    .footer_provider {
-      width: 50%;
-
-      .provider_company {
-        width: 70%;
-
-        p {
-          font-family: 'Raleway', sans-serif;
-          font-weight: 500;
-          font-size: 12px;
-          color: #FFFFFF;
-          text-align: justify;
-        }
-      }
-      .social_media{
-        display: none;
-      }
-      .provider_googlePlay {
-        display: flex;
-        width: 80%;
-        margin-top: 30px;
-
-        .qrCode {
-          img {
-            width: 70px;
-          }
-        }
-
-        .aplication {
-          margin-left: 30px;
-
-          h3 {
-            text-align: center;
-            font-family: 'Raleway', sans-serif;
-            font-weight: 400;
-            font-size: 16px;
-            color: #FFFFFF;
-          }
-
-          .linkNets {
-            margin-top: 10px;
-
-            img {
-              margin-right: 20px;
-              cursor: pointer;
-
-              &:active {
-                transform: scale(.96);
-              }
-            }
-          }
-        }
-      }
-
-
-    }
-
-    .footer_info {
-      width: 50%;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-
-      .info {
-        h3 {
-          font-family: 'Raleway', sans-serif;
-          font-weight: 500;
-          font-size: 18px;
-          color: #FFFFFF;
-        }
-
-        h4 {
-          font-family: 'Raleway', sans-serif;
-          font-weight: 500;
-          font-size: 20px;
-          color: #FFFFFF;
-          margin-top: 5px;
-        }
-
-        a {
-          text-decoration: none;
-          font-family: 'Raleway', sans-serif;
-          font-weight: 500;
-          font-size: 18px;
-          color: #EA3E2A;
-          margin-top: 5px;
-        }
-
-        p {
-          font-family: 'Raleway', sans-serif;
-          font-weight: 500;
-          font-size: 18px;
-          color: #fff;
-          margin-top: 5px;
-        }
-
-        pre {
-          font-family: 'Raleway', sans-serif;
-          font-weight: 500;
-          font-size: 18px;
-          color: #767676;
-          margin-top: 5px;
-        }
-
-        .ins {
-          margin-top: 10px; 
-          img {
-            margin-right: 10px;
-            width: 35px;
-            cursor: pointer;
-
-
-            &:active {
-              transform: scale(.96);
-            }
-          }
-        }
-      }
-
-      .info_log {
-        a{
-          text-decoration: none;
-           h3 {
-          font-family: 'Raleway', sans-serif;
-          font-weight: 700;
-          font-size: 18px;
-          color: #FFFFFF;
-          margin-top: 20px;
-          cursor: pointer;
-
-          &:hover {
-            color: #EA3E2A;
-          }
-        }
-        }
-       
-
-        img {
-          margin-top: 10px;
-
-        }
-      }
-    }
-
-    @media screen and (max-width:1200px) {
-      flex-direction: column;
-      justify-content: center;
-
-      .footer_provider {
-        width: 100%;
-
-        .provider_company { 
-          width: 100%;
-          p {
-            font-size: 16px;
-          }
-        }
-        .social_media{
-          display: block;
-          width: 100%;
-          display: flex;
-          margin-top: 30px; 
-          
-          flex-direction: column;
-          h3{
-            text-align: left;
-            font-family: 'Raleway', sans-serif; 
-            font-weight: 400;
-            font-size: 16px; 
-            color: #FFFFFF;
-          }
-          .ins {
-            margin-top: 30px;
-  
-            img {
-              margin-right: 10px;
-              width: 35px;
-              cursor: pointer;
-  
-              &:active {
-                transform: scale(.96);
-              }
-            }
-          }
-        }
-        .provider_googlePlay {
-          display: flex;
-          width: 100%; 
-          margin-top: 30px; 
-          .qrCode {
-            display: none;
-          }
-
-          .aplication {
-            margin-left: 0;
-            h3{
-              text-align: left;
-            }
-            .linkNets {
-              margin-top: 30px;
-            }
-          }
-        }
-      }
-
-      .footer_info {
-        width: 100%;  
-        justify-content: space-between;
-        .info {  
-          margin-top: 30px;
-          .ins { 
-            display: none;
-          }
-          h4{
-            margin-top: 10px;
-            margin-bottom: 10px;
-          } 
-          p{
-            margin-top: 10px;
-          }
-        }
-
-        .info_log { 
-          display: none;
-        }
-      }
-    }
-  }
-}

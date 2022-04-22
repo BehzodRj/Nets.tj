@@ -1,0 +1,137 @@
+ 
+
+.vacancy__container {
+  width: 90%;
+  margin: 120px auto 0;
+  padding: 10px;
+
+  h1 {
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 48px;
+    color: #FFFFFF;
+  }
+
+  .vacancy__special {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 100px;
+
+    .vacancy__block {
+      max-width: 340px;
+      background: #292929;
+      padding: 10px;
+      border-radius: 30px;
+      border: 1px solid rgba(225, 255, 255, 0.5);
+      margin-right: 20px;
+      margin-bottom: 100px;
+
+      .icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          max-width: 250px;
+          margin-top: -70px;
+        }
+      }
+
+      .text {
+        width: 90%;
+        margin: auto;
+
+        h3 {
+          font-family: 'Raleway', sans-serif;
+          font-weight: 700;
+          font-size: 36px;
+          color: #FFFFFF;
+          text-align: center;
+          margin-top: 30px;
+        }
+
+        p {
+          font-family: 'Raleway', sans-serif;
+          font-weight: 700;
+          font-size: 18px;
+          color: #FFFFFF;
+          text-align: justify;
+          margin-top: 10px;
+        }
+      }
+
+      .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+
+        button {
+          font-family: 'Raleway', sans-serif;
+          font-weight: 700;
+          font-size: 18px;
+          color: #EA3E2A;
+          background: none;
+          border: 1px solid #EA3E2A;
+          padding: 5px 20px;
+          border-radius: 30px;
+          cursor: pointer;
+
+          &:hover {
+            opacity: .8;
+          }
+
+          &:active {
+            transform: scale(.99);
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width:768px) {
+      .vacancy__block {
+        .icon {
+          img {
+            width: 200px;
+          }
+        }
+
+        .text {
+          h3 {
+            font-size: 30px;
+          }
+
+          p {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width:450px) {
+      .vacancy__block {
+        margin-right: 0;
+        margin-left: 0;
+      }
+    }
+
+    @media screen and (max-width:320px) {
+      .vacancy__block {
+        .text {
+          h3 {
+            font-size: 25px;
+          }
+
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+
+}
