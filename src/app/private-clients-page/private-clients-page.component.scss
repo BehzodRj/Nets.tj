@@ -668,10 +668,8 @@
             font-size: 60px;
             color: #EA3E2A;
             margin-top: 80px;
-
           }
         }
-
       }
 
       .eazyPayment {
@@ -873,130 +871,240 @@
 .footer__page {
   width: 100%;
   margin-top: 200px;
-  background: #000; 
+  background: #000;
+
   .footer__container {
     width: 90%;
-    margin:  auto; 
+    margin: auto;
     display: flex;
+    padding: 30px 0;
+
     .footer_provider {
       width: 50%;
-      .provider_company { 
+
+      .provider_company {
         width: 70%;
+
         p {
-          font-family: 'Raleway', sans-serif; 
+          font-family: 'Raleway', sans-serif;
           font-weight: 500;
-          font-size: 12px; 
+          font-size: 12px;
           color: #FFFFFF;
           text-align: justify;
         }
-      } 
-      .provider_googlePlay { 
-        display: flex; 
+      }
+      .social_media{
+        display: none;
+      }
+      .provider_googlePlay {
+        display: flex;
         width: 80%;
         margin-top: 30px;
-        .qrCode{
-          img{
+
+        .qrCode {
+          img {
             width: 70px;
           }
-        } 
+        }
+
         .aplication {
           margin-left: 30px;
-          h3{
+
+          h3 {
             text-align: center;
-            font-family: 'Raleway', sans-serif; 
+            font-family: 'Raleway', sans-serif;
             font-weight: 400;
-            font-size: 16px; 
-            color: #FFFFFF; 
+            font-size: 16px;
+            color: #FFFFFF;
           }
+
           .linkNets {
             margin-top: 10px;
-            img{
+
+            img {
               margin-right: 20px;
               cursor: pointer;
-              &:active{
+
+              &:active {
                 transform: scale(.96);
               }
             }
-          } 
+          }
         }
       }
 
 
     }
+
     .footer_info {
       width: 50%;
       display: flex;
       justify-content: space-around;
       align-items: center;
+
       .info {
-        h3{
-          font-family: 'Raleway', sans-serif; 
+        h3 {
+          font-family: 'Raleway', sans-serif;
           font-weight: 500;
-          font-size: 18px; 
-          color: #FFFFFF; 
+          font-size: 18px;
+          color: #FFFFFF;
         }
-        h4{
-          font-family: 'Raleway', sans-serif; 
+
+        h4 {
+          font-family: 'Raleway', sans-serif;
           font-weight: 500;
-          font-size: 20px; 
+          font-size: 20px;
           color: #FFFFFF;
           margin-top: 5px;
         }
-        a{
+
+        a {
           text-decoration: none;
-          font-family: 'Raleway', sans-serif; 
+          font-family: 'Raleway', sans-serif;
           font-weight: 500;
           font-size: 18px;
           color: #EA3E2A;
           margin-top: 5px;
         }
-        p{ 
-          font-family: 'Raleway', sans-serif; 
+
+        p {
+          font-family: 'Raleway', sans-serif;
           font-weight: 500;
           font-size: 18px;
           color: #fff;
           margin-top: 5px;
         }
-        pre{ 
-          font-family: 'Raleway', sans-serif; 
+
+        pre {
+          font-family: 'Raleway', sans-serif;
           font-weight: 500;
           font-size: 18px;
           color: #767676;
           margin-top: 5px;
         }
+
         .ins {
-          margin-top: 10px;
-          img{
+          margin-top: 10px; 
+          img {
             margin-right: 10px;
             width: 35px;
             cursor: pointer;
-            &:active{
+
+
+            &:active {
               transform: scale(.96);
             }
           }
-        } 
-      } 
-      
+        }
+      }
+
       .info_log {
-        h2{
-          font-family: 'Raleway', sans-serif; 
+        a{
+          text-decoration: none;
+           h3 {
+          font-family: 'Raleway', sans-serif;
           font-weight: 700;
-          font-size: 18px; 
+          font-size: 18px;
           color: #FFFFFF;
           margin-top: 20px;
           cursor: pointer;
-          &:hover{
+
+          &:hover {
             color: #EA3E2A;
           }
         }
-        img{
-          margin-top: 10px;
-          
         }
-      } 
+       
+
+        img {
+          margin-top: 10px;
+
+        }
+      }
+    }
+
+    @media screen and (max-width:1200px) {
+      flex-direction: column;
+      justify-content: center;
+
+      .footer_provider {
+        width: 100%;
+
+        .provider_company { 
+          width: 100%;
+          p {
+            font-size: 16px;
+          }
+        }
+        .social_media{
+          display: block;
+          width: 100%;
+          display: flex;
+          margin-top: 30px; 
+          
+          flex-direction: column;
+          h3{
+            text-align: left;
+            font-family: 'Raleway', sans-serif; 
+            font-weight: 400;
+            font-size: 16px; 
+            color: #FFFFFF;
+          }
+          .ins {
+            margin-top: 30px;
+  
+            img {
+              margin-right: 10px;
+              width: 35px;
+              cursor: pointer;
+  
+              &:active {
+                transform: scale(.96);
+              }
+            }
+          }
+        }
+        .provider_googlePlay {
+          display: flex;
+          width: 100%; 
+          margin-top: 30px; 
+          .qrCode {
+            display: none;
+          }
+
+          .aplication {
+            margin-left: 0;
+            h3{
+              text-align: left;
+            }
+            .linkNets {
+              margin-top: 30px;
+            }
+          }
+        }
+      }
+
+      .footer_info {
+        width: 100%;  
+        justify-content: space-between;
+        .info {  
+          margin-top: 30px;
+          .ins { 
+            display: none;
+          }
+          h4{
+            margin-top: 10px;
+            margin-bottom: 10px;
+          } 
+          p{
+            margin-top: 10px;
+          }
+        }
+
+        .info_log { 
+          display: none;
+        }
+      }
     }
   }
 }
-
-
-
