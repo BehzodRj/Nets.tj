@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./vacancy-special.component.scss']
 })
 export class VacancySpecialComponent implements OnInit {
-
+  modalShow = false
   constructor() { }
 
   ngOnInit(): void {
