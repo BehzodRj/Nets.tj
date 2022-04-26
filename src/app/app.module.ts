@@ -9,6 +9,7 @@ import { VacancyPageComponent } from './vacancy-page/vacancy-page.component';
 import { HeaderComponent } from './header/header.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
+import { VacancySpecialComponent } from './vacancy-special/vacancy-special.component'; 
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FooterComponent } from './footer/footer.component';
     ForBusinessPageComponent,
     VacancyPageComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    VacancySpecialComponent, 
   ],
   imports: [
     BrowserModule,
