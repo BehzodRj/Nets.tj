@@ -90,7 +90,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      display: none;
+      display: none; 
     }
 
     /* скрываем чекбокс */
@@ -150,6 +150,17 @@
       box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
       z-index: 2;
       border-bottom-left-radius: 30px;
+      li{
+        h1{ 
+          cursor: pointer;
+          text-align: center; 
+          font-size: 20px;
+          font-family: 'Raleway', sans-serif; 
+          font-size: 21px;
+          color:#EFF2F6;
+          cursor: pointer;
+        }
+      }
     }
 
     .menu__box img {
@@ -166,7 +177,7 @@
       font-weight: 300;
       text-decoration: none;
       padding: 5px;
-      text-align: center; 
+      text-align: left; 
     }
 
     .menu__item:hover {
@@ -224,5 +235,24 @@
       }
     }
   }
+  
+}
+
+.mat-accordion{
+  a{
+    text-decoration: none;
+    color: #EFF2F6; 
+    h2{
+      &:hover{
+        opacity: .8;
+      }
+    }
+  }
+}
+
  
+.mat-expansion-panel-header-title{
+  margin-right: 0;   
+  display: flex;
+  justify-content: center;
 }

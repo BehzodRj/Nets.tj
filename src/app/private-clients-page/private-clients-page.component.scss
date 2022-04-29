@@ -513,7 +513,7 @@
                 color: #FFFFFF;
                 cursor: pointer;
                 background: #EA3E2A;
-
+                border: none;
 
                 &:active {
                   transform: scale(.98);
@@ -683,6 +683,7 @@
             font-size: 60px;
             color: #EA3E2A;
             margin-top: 80px;
+            line-height: 60px;
           }
         }
       }

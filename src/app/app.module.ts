@@ -9,7 +9,9 @@ import { VacancyPageComponent } from './vacancy-page/vacancy-page.component';
 import { HeaderComponent } from './header/header.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
-import { VacancySpecialComponent } from './vacancy-special/vacancy-special.component'; 
+import { VacancySpecialComponent } from './vacancy-special/vacancy-special.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';  
+import {MatExpansionModule} from '@angular/material/expansion';
 
 @NgModule({
   declarations: [
@@ -20,12 +22,15 @@ import { VacancySpecialComponent } from './vacancy-special/vacancy-special.compo
     HeaderComponent,
     FooterComponent,
     VacancySpecialComponent, 
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]
