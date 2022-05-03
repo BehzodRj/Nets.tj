@@ -31,7 +31,6 @@ export class VacancySpecialComponent implements OnInit {
     console.log(vacancyAddFormData)
     const letterAddFormData = {...this.letterAddForm.value}
     console.log(letterAddFormData)
-
   }
 
 }
