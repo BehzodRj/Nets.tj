@@ -41,34 +41,40 @@
         font-weight: 700;
         font-size: 25px;
         color: #DFDFDF;
-        margin-top: 20px;
-  
+        margin-top: 40px;
+
       }
-  
-      .block_input {
+
+      .rezume {
+        border: 2px dashed #EA3E2A;
+        padding: 50px 0;
+        margin-top: 30px;
         display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-  
-        input {
-          padding: 5px 10px;
-          margin-right: 20px;
-          margin-top: 10px;
-          background: none;
-          border: 1px solid #6F7071;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column; 
+        span {
+          text-align: center;
           font-family: 'Raleway', sans-serif;
           font-style: normal;
           font-weight: 400;
           font-size: 24px;
           color: #AAAAAA;
-  
+          margin-bottom: 30px;
+          &:last-child {
+            color: #EA3E2A;
+            cursor: pointer;
+          }
         }
-  
-        @media screen and (max-width:700px) {
-          justify-content: center;
-  
-          input {
-            width: 100%;
+        .rezume_choose{
+          max-width: 200px;
+          display: flex;
+          justify-content: top;
+          flex-direction: column;
+          align-items: center;
+          margin: auto;
+          input{
+            position: absolute;
           }
         }
       }

@@ -1,38 +1,47 @@
 <div class="modal__container" *ngIf="modalShow == true">
-    <div class="time">
-      <i class="fas fa-times fa-2x" (click)="modalShow = false"></i>
+  <div class="time">
+    <i class="fas fa-times fa-2x" (click)="modalShow = false"></i>
+  </div>
+  <div class="modal__block">
+    <h1>ВАШ ОТКЛИК</h1>
+    <h2>ТЫ ОТКЛИКАЕШЬСЯ НА ВАКАНСИЮ</h2>
+    <h2>Юрист</h2>
+    <h3>Контактная информация:</h3>
+    <div class="block_input">
+      <form action="" [formGroup]="vacancyAddForm">
+        <input type="text" placeholder="Фамилия" formControlName="surname">
+        <input type="text" placeholder="Имя" formControlName="name">
+        <input type="text" placeholder="Отчество" formControlName="dadname">
+        <input type="tel" placeholder="Телефон" formControlName="tel">
+        <input type="email" placeholder="Email" formControlName="email">
+      </form>
     </div>
-    <div class="modal__block">
-      <h1>ВАШ ОТКЛИК</h1>
-      <h2>ТЫ ОТКЛИКАЕШЬСЯ НА ВАКАНСИЮ</h2>
-      <h2>Юрист</h2>
-      <h3>Контактная информация:</h3>
-      <div class="block_input">
-          <input type="text" placeholder="Фамилия">
-          <input type="text" placeholder="Имя">
-          <input type="text" placeholder="Отчество">
-          <input type="tel" placeholder="Телефон">
-          <input type="email" placeholder="Email">
-      </div>
-      <div class="letter">
-          <h3>Сопроводительное письмо (необязятельно):</h3>
-          <textarea name="" id="" cols="10" rows="5" placeholder="Напиши здесь, почему ты хочешь работать на этой позиции."></textarea>
-      </div>
-      <div class="rezume_block">
-          <h3>Резюме:</h3>
-          <div class="rezume">
-              <span>Перетащи резюме сюда или выбери из папки </span>
+    <div class="letter">
+        <h3>Сопроводительное письмо (необязятельно):</h3>
+        <textarea name="" id="" cols="10" rows="5" placeholder="Напиши здесь, почему ты хочешь работать на этой позиции."></textarea>
+    </div>
+    <div class="rezume_block">
+        <h3>Резюме:</h3>
+        <div class="rezume">
+            <span>Перетащи резюме сюда или выбери из папки </span>
+            <div class="rezume_choose">
+              <input type="file" name="" id="">
               <span>Выбрать</span>
-          </div>
-      </div>
-      <div class="subtitle">
-          Отправляя Заявку, я соглашаюсь на обработку 
-          <span>моих персональных данных</span>
-      </div> 
+            </div>
+        </div>
     </div>
     <div class="btn">
       <button>Отправить</button>
   </div>
+  <div class="btn">
+    <button (click)="send()">Отправить</button>
+</div>
+</div>
+<div class="specialVacancy__container" *ngIf="modalShow == false">
+    <app-header></app-header>
+    <div class="type_page">
+    <h2 routerLink="/vacancy">Вакансии</h2>
+    <h3>\ Специалист по подключениям</h3>
   </div>
   <div class="specialVacancy__container" *ngIf="modalShow == false">
       <app-header></app-header>
