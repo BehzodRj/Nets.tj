@@ -262,12 +262,14 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
-        align-items: center; 
+        align-items: center;
+
         .nets_block {
           max-width: 340px;
           border-radius: 25px 25px 0px 0px;
           margin-top: 20px;
-          margin-right: 20px; 
+          margin-right: 20px;
+
           .nets_title {
             display: flex;
             justify-content: center;
@@ -291,7 +293,7 @@
             width: 100%;
             padding: 10px 0;
             margin-top: -30px;
-            
+
             .price {
               display: flex;
               justify-content: center;
@@ -312,7 +314,7 @@
                 color: #FFFFFF;
                 margin-left: 10px;
               }
-            } 
+            }
 
             .speed {
               display: flex;
@@ -393,12 +395,14 @@
         }
 
         @media screen and (max-width:1400px) {
-          flex-wrap: wrap; 
+          flex-wrap: wrap;
           justify-content: center;
         }
+
         @media screen and (max-width:768px) {
-          flex-wrap: wrap; 
-          .nets_block{
+          flex-wrap: wrap;
+
+          .nets_block {
             margin-right: 0;
           }
         }
@@ -525,8 +529,9 @@
           flex-wrap: wrap;
           justify-content: center;
         }
-        @media screen and (max-width:768px) { 
-          .wifi_block{
+
+        @media screen and (max-width:768px) {
+          .wifi_block {
             margin-right: 0;
           }
         }
@@ -660,17 +665,18 @@
       }
     }
 
-    .benifits__container{
+    .benifits__container {
       width: 100%;
       margin: 50px auto;
       margin-bottom: 200px;
+
       .benifits__title {
         width: 90%;
         display: flex;
         justify-content: flex-end;
         align-items: flex-end;
 
-        .title { 
+        .title {
 
           h1 {
             text-align: left;
@@ -792,8 +798,10 @@
 
 
       }
+
       @media screen and (max-width:1100px) {
         margin-bottom: 0;
+
         .benifits__title {
           justify-content: flex-end;
           align-items: flex-end;
@@ -807,7 +815,8 @@
               font-size: 50px;
             }
           }
-        } 
+        }
+
         .eazyPayment {
           flex-direction: column-reverse;
           position: none;
@@ -855,6 +864,7 @@
           }
         }
       }
+
       @media screen and (max-width:500px) {
         .benifits__title {
           .title {
@@ -864,6 +874,7 @@
           }
         }
       }
+
       @media screen and (max-width:400px) {
         .benifits__title {
           .title {
@@ -876,6 +887,3 @@
     }
   }
 }
-
-
-

@@ -1,462 +1,339 @@
 <div class="modal_conection-container" *ngIf="showModalConnection == true">
-  <i class="fas fa-times fa-2x" (click)="showModalConnection = false"></i>
-  <div class="modal_conection-block">
-    <h1 class="title">ВАШ ОТКЛИК</h1>
-    <div class="conection_title">
-      <h1>ТЫ ПОДКЛЮЧАЕШЬ ТАРИФ</h1>
-      <h2>NETS 5000009</h2>
-    </div>
-
-    <div class="conection_contacts">
-      <h1>Контактная информация:</h1>
-      <form class="connection_information">
-        <input type="text" placeholder="Фамилия" />
-        <input type="text" placeholder="Имя" />
-        <input type="text" placeholder="Отчество" />
-        <input type="number" placeholder="Телефон" />
-        <input type="text" placeholder="Адресс" />
-      </form>
-    </div>
-
-    <div class="conection_technical">
-      <h1>Технология подключения:</h1>
-      <div class="connection_button">
-        <input
-          type="submit"
-          [ngStyle]="{ background: clrTech == 1 ? '#EA3E2A' : '#202020' }"
-          value="GPON"
-          (click)="gpon($event)"
-        />
-        <input
-          type="submit"
-          [ngStyle]="{ background: clrTech == 2 ? '#EA3E2A' : '#202020' }"
-          value="Ethernet"
-          (click)="ethernet($event)"
-        />
-        <input
-          type="submit"
-          [ngStyle]="{ background: clrTech == 3 ? '#EA3E2A' : '#202020' }"
-          value="Антенна"
-          (click)="antenna($event)"
-        />
+    <i class="fas fa-times fa-2x" (click)="showModalConnection = false"></i>
+    <div class="modal_conection-block">
+      <h1 class="title">ВАШ ОТКЛИК</h1>
+      <div class="conection_title">
+        <h1>ТЫ ПОДКЛЮЧАЕШЬ ТАРИФ</h1>
+        <h2>{{ tarifsName | uppercase }}</h2>
       </div>
-    </div>
-
-    <div class="conection_comment">
-      <h1>Комментарий <span>(необязятельно)</span>:</h1>
-      <form class="connection_textarea">
-        <textarea
-          placeholder="Напиши здесь, напиши что-нибудь. можешь не писать. "
-        ></textarea>
-      </form>
-    </div>
-
-    <div class="conection_photo">
-      <h1 class="title">Фотография паспорта:</h1>
-      <div class="connection_passport">
-        <h1>Перетащи фото сюда или выбери из папки</h1>
-        <div class="connection_choose">
-          <input type="file" />
-          <h2>Выбрать</h2>
+  
+      <div class="conection_contacts">
+        <h1>Контактная информация:</h1>
+        <form class="connection_information">
+          <input type="text" placeholder="Фамилия" />
+          <input type="text" placeholder="Имя" />
+          <input type="text" placeholder="Отчество" />
+          <input type="number" placeholder="Телефон" />
+          <input type="text" placeholder="Адресс" />
+        </form>
+      </div>
+  
+      <div class="conection_technical">
+        <h1>Технология подключения:</h1>
+        <div class="connection_button">
+          <input
+            type="submit"
+            [ngStyle]="{ background: clrTech == 1 ? '#EA3E2A' : '#202020' }"
+            value="GPON"
+            (click)="gpon($event)"
+          />
+          <input
+            type="submit"
+            [ngStyle]="{ background: clrTech == 2 ? '#EA3E2A' : '#202020' }"
+            value="Ethernet"
+            (click)="ethernet($event)"
+          />
+          <input
+            type="submit"
+            [ngStyle]="{ background: clrTech == 3 ? '#EA3E2A' : '#202020' }"
+            value="Антенна"
+            (click)="antenna($event)"
+          />
         </div>
       </div>
-    </div>
-
-    <div class="conection_private">
-      <h1>
-        Отправляя Заявку, я соглашаюсь на обработку
-        <span>моих персональных данных</span>
-      </h1>
-    </div>
-
-    <div class="conection_button">
-      <button>Отправить</button>
-    </div>
-  </div>
-</div>  
-<div class="container" *ngIf="showModalConnection == false">
-  <app-header></app-header>
-  <div class="container__page">
-    <div class="image__container">
-      <img src="./assets/img/nets_image.svg" alt="" />
-    </div>
-    <div class="tarifs__container" id="tarifs">
-      <h1>Тарифы</h1>
-      <div class="nets__container">
-        <div class="nets_block">
-          <div class="nets_title">NETS 1</div>
-          <div class="nets_subtitle">
-            <div class="price">
-              <h3>99</h3>
-              <h4>
-                сомони <br />
-                в месяц
-              </h4>
-            </div>
-            <div class="speed">
-              <h3>Скорость до 1 Mbit/s</h3>
-              <span></span>
-            </div>
-            <div class="connection">
-              <span>
-                <img src="./assets/img/Ellipse 48.svg" alt="" />
-                <h3>Оборудование в аренду</h3>
-              </span>
-              <span>
-                <img src="./assets/img/Ellipse 48.svg" alt="" />
-                <h3>Бесплатное IPTV в подарок на 1 месяц</h3>
-              </span>
-              <span>
-                <img src="./assets/img/Ellipse 48.svg" alt="" />
-                <h3>Бесплатное подключение</h3>
-              </span>
-              <span>
-                <img src="./assets/img/Ellipse 48.svg" alt="" />
-                <h3>Безлимитый трафик</h3>
-              </span>
-              <span>
-                <img src="./assets/img/Ellipse 48.svg" alt="" />
-                <h3>Доступ к локальным ресурсам до 100мбит</h3>
-              </span>
-            </div>
-            <div class="btn">
-              <button (click)="showModalConnection = true">Подключить</button>
-            </div>
+  
+      <div class="conection_comment">
+        <h1>Комментарий <span>(необязятельно)</span>:</h1>
+        <form class="connection_textarea">
+          <textarea
+            placeholder="Напиши здесь, напиши что-нибудь. можешь не писать. "
+          ></textarea>
+        </form>
+      </div>
+  
+      <div class="conection_photo">
+        <h1 class="title">Фотография паспорта:</h1>
+        <div class="connection_passport">
+          <h1>Перетащи фото сюда или выбери из папки</h1>
+          <div class="connection_choose">
+            <input type="file" />
+            <h2>Выбрать</h2>
           </div>
         </div>
-        <div class="nets_block">
-          <div class="nets_title">NETS 2</div>
-          <div class="nets_subtitle">
-            <div class="price">
-              <h3>125</h3>
-              <h4>
-                сомони <br />
-                в месяц
-              </h4>
-            </div>
-            <div class="speed">
-              <h3>Скорость до 5 Mbit/s</h3>
-              <span></span>
-            </div>
-            <div class="connection">
-              <span>
-                <img src="./assets/img/Ellipse 48.svg" alt="" />
-                <h3>Оборудование в аренду</h3>
-              </span>
-              <span>
-                <img src="./assets/img/Ellipse 48.svg" alt="" />
-                <h3>Бесплатное IPTV в подарок на 1 месяц</h3>
-              </span>
-              <span>
-                <img src="./assets/img/Ellipse 48.svg" alt="" />
-                <h3>Бесплатное подключение</h3>
-              </span>
-              <span>
-                <img src="./assets/img/Ellipse 48.svg" alt="" />
-                <h3>Безлимитый трафик</h3>
-              </span>
-              <span>
-                <img src="./assets/img/Ellipse 48.svg" alt="" />
-                <h3>Доступ к локальным ресурсам до 100мбит</h3>
-              </span>
-            </div>
-            <div class="btn">
-              <button>Подключить</button>
-            </div>
-          </div>
-        </div>
-        <div class="nets_block">
-          <div class="nets_title">NETS 3</div>
-          <div class="nets_subtitle">
-            <div class="price">
-              <h3>225</h3>
-              <h4>
-                сомони <br />
-                в месяц
-              </h4>
-            </div>
-            <div class="speed">
-              <h3>Скорость до 10 Mbit/s</h3>
-              <span></span>
-            </div>
-            <div class="connection">
-              <span>
-                <img src="./assets/img/Ellipse 48.svg" alt="" />
-                <h3>Оборудование в аренду</h3>
-              </span>
-              <span>
-                <img src="./assets/img/Ellipse 48.svg" alt="" />
-                <h3>Бесплатное IPTV в подарок на 1 месяц</h3>
-              </span>
-              <span>
-                <img src="./assets/img/Ellipse 48.svg" alt="" />
-                <h3>Бесплатное подключение</h3>
-              </span>
-              <span>
-                <img src="./assets/img/Ellipse 48.svg" alt="" />
-                <h3>Безлимитый трафик</h3>
-              </span>
-              <span>
-                <img src="./assets/img/Ellipse 48.svg" alt="" />
-                <h3>Доступ к локальным ресурсам до 100мбит</h3>
-              </span>
-            </div>
-            <div class="btn">
-              <button>Подключить</button>
-            </div>
-          </div>
-        </div>
-        <div class="nets_block">
-          <div class="nets_title">NETS 4</div>
-          <div class="nets_subtitle">
-            <div class="price">
-              <h3>375</h3>
-              <h4>
-                сомони <br />
-                в месяц
-              </h4>
-            </div>
-            <div class="speed">
-              <h3>Скорость до 15 Mbit/s</h3>
-              <span></span>
-            </div>
-            <div class="connection">
-              <span>
-                <img src="./assets/img/Ellipse 48.svg" alt="" />
-                <h3>Оборудование в аренду</h3>
-              </span>
-              <span>
-                <img src="./assets/img/Ellipse 48.svg" alt="" />
-                <h3>Бесплатное IPTV в подарок на 1 месяц</h3>
-              </span>
-              <span>
-                <img src="./assets/img/Ellipse 48.svg" alt="" />
-                <h3>Бесплатное подключение</h3>
-              </span>
-              <span>
-                <img src="./assets/img/Ellipse 48.svg" alt="" />
-                <h3>Безлимитый трафик</h3>
-              </span>
-              <span>
-                <img src="./assets/img/Ellipse 48.svg" alt="" />
-                <h3>Доступ к локальным ресурсам до 100мбит</h3>
-              </span>
-            </div>
-            <div class="btn">
-              <button>Подключить</button>
+      </div>
+  
+      <div class="conection_private">
+        <h1>
+          Отправляя Заявку, я соглашаюсь на обработку
+          <span>моих персональных данных</span>
+        </h1>
+      </div>
+  
+      <div class="conection_button">
+        <button>Отправить</button>
+      </div>
+    </div>
+  </div>  
+  <div class="container" *ngIf="showModalConnection == false">
+    <app-header></app-header>
+    <div class="container__page">
+      <div class="image__container">
+        <img src="./assets/img/nets_image.svg" alt="" />
+      </div>
+      <div class="tarifs__container" id="tarifs">
+        <h1>Тарифы</h1>
+        <div class="nets__container">
+          <div class="nets_block" *ngFor="let tarifs of tarifsData">
+            <div class="nets_title">{{ tarifs.name }}</div>
+            <div class="nets_subtitle">
+              <div class="price">
+                <h3>{{ tarifs.price }}</h3>
+                <h4>
+                  сомони <br />
+                  в месяц
+                </h4>
+              </div>
+              <div class="speed">
+                <h3>{{ tarifs.speed }}</h3>
+                <span></span>
+              </div>
+              <div class="connection">
+                <span>
+                  <img src="./assets/img/Ellipse 48.svg" alt="" />
+                  <h3>{{ tarifs.li_1 }}</h3>
+                </span>
+                <span>
+                  <img src="./assets/img/Ellipse 48.svg" alt="" />
+                  <h3>{{ tarifs.li_2 }}</h3>
+                </span>
+                <span>
+                  <img src="./assets/img/Ellipse 48.svg" alt="" />
+                  <h3>{{ tarifs.li_3 }}</h3>
+                </span>
+                <span>
+                  <img src="./assets/img/Ellipse 48.svg" alt="" />
+                  <h3>{{ tarifs.li_4 }}</h3>
+                </span>
+                <span>
+                  <img src="./assets/img/Ellipse 48.svg" alt="" />
+                  <h3>{{ tarifs.li_5 }}</h3>
+                </span>
+              </div>
+              <div class="btn">
+                <button (click)="connectionTarifs(tarifs.id)">Подключить</button>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="Equipment__container" id="equipment">
-      <h1>Оборудование</h1>
-      <div class="wifi__container">
-        <div class="wifi_block">
-          <div class="wifi_title">
-            <h3>GPON+ WIFI</h3>
-            <h4>ONU BDCOM GP1704-2F-E</h4>
+      <div class="Equipment__container" id="equipment">
+        <h1>Оборудование</h1>
+        <div class="wifi__container">
+          <div class="wifi_block">
+            <div class="wifi_title">
+              <h3>GPON+ WIFI</h3>
+              <h4>ONU BDCOM GP1704-2F-E</h4>
+            </div>
+            <div class="wifi_subtitle">
+              <div class="icon">
+                <img src="./assets/img/gpon_wifi.svg" alt="" />
+              </div>
+              <div class="price">
+                <h3>450 TJS</h3>
+              </div>
+              <div class="btn">
+                <button>Подробнее</button>
+              </div>
+            </div>
           </div>
-          <div class="wifi_subtitle">
+          <div class="wifi_block">
+            <div class="wifi_title">
+              <h3>IPTV</h3>
+              <h4>TX3 mini</h4>
+            </div>
+            <div class="wifi_subtitle">
+              <div class="icon">
+                <img src="./assets/img/iptv.svg" alt="" />
+              </div>
+              <div class="price">
+                <h3>299 TJS</h3>
+              </div>
+              <div class="btn">
+                <button>Подробнее</button>
+              </div>
+            </div>
+          </div>
+          <div class="wifi_block">
+            <div class="wifi_title">
+              <h3>GPON</h3>
+              <h4>SNR-ONU-GPON-1G-mini-C+</h4>
+            </div>
+            <div class="wifi_subtitle">
+              <div class="icon">
+                <img src="./assets/img/gpon.svg" alt="" />
+              </div>
+              <div class="price">
+                <h3>299 TJS</h3>
+              </div>
+              <div class="btn">
+                <button>Подробнее</button>
+              </div>
+            </div>
+          </div>
+          <div class="wifi_block">
+            <div class="wifi_title">
+              <h3>GPON</h3>
+              <h4>SNR-ONU-GPON-1G-mini-C+</h4>
+            </div>
+            <div class="wifi_subtitle">
+              <div class="icon">
+                <img src="./assets/img/gpon.svg" alt="" />
+              </div>
+              <div class="price">
+                <h3>299 TJS</h3>
+              </div>
+              <div class="btn">
+                <button>Подробнее</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="channelList__container" id="channelList">
+        <h1>Список каналов</h1>
+        <div class="channel__container">
+          <div class="allList">
+            <div class="allList_items">
+              <img src="./assets/img/allChannels/allChannels.svg" alt="" />
+              <h3>Все каналы</h3>
+            </div>
+            <div class="allList_items">
+              <img src="./assets/img/allChannels/tajik_icon.svg" alt="" />
+              <h3>Таджикские</h3>
+            </div>
+            <div class="allList_items">
+              <img src="./assets/img/allChannels/movie.svg" alt="" />
+              <h3>Кино</h3>
+            </div>
+            <div class="allList_items">
+              <img src="./assets/img/allChannels/child.svg" alt="" />
+              <h3>Детские</h3>
+            </div>
+            <div class="allList_items">
+              <img src="./assets/img/allChannels/sport.svg" alt="" />
+              <h3>Спортивные</h3>
+            </div>
+            <div class="allList_items">
+              <img src="./assets/img/allChannels/cognitive.svg" alt="" />
+              <h3>Познавательные</h3>
+            </div>
+            <div class="allList_items">
+              <img src="./assets/img/allChannels/tabler_ballon.svg" alt="" />
+              <h3>Развлекательные</h3>
+            </div>
+          </div>
+          <div class="allChannels">
+            <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
+            <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
+            <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
+            <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
+            <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
+            <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
+            <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
+            <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
+            <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
+            <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
+            <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
+            <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
+            <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
+            <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
+            <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
+            <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
+            <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
+            <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
+            <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
+            <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
+            <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
+            <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
+            <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
+            <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
+            <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
+            <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
+            <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
+            <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
+            <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
+            <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
+            <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
+            <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
+            <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
+            <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
+            <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
+            <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
+            <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
+            <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
+            <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
+            <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
+            <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
+            <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
+            <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
+            <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
+            <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
+            <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
+            <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
+            <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
+          </div>
+        </div>
+      </div>
+  
+      <div class="benifits__container">
+        <div class="benifits__title">
+          <div class="title">
+            <h1>
+              НАШИ <br /> ПРЕИМУЩЕСТВА
+            </h1>
+          </div>
+        </div>
+        <div class="eazyPayment">
+          <div class="eazy_title">
+            <div class="text">
+              <h3>Доступные цены и удобная оплата.</h3>
+              <p>
+                Оптимальная ценовая политика, которая полностью соответствует
+                Вашим требованиям и желаниям. Для более удобной работы мы
+                предоставляем нашим клиентам несколько способов оплаты услуг :
+                Онлайн и в терминалах по городу.
+              </p>
+            </div>
             <div class="icon">
-              <img src="./assets/img/gpon_wifi.svg" alt="" />
+              <img src="./assets/img/star.svg" alt="" />
+              <img src="./assets/img/nets_w.svg" alt="" />
             </div>
-            <div class="price">
-              <h3>450 TJS</h3>
-            </div>
-            <div class="btn">
-              <button>Подробнее</button>
-            </div>
-          </div>
-        </div>
-        <div class="wifi_block">
-          <div class="wifi_title">
-            <h3>IPTV</h3>
-            <h4>TX3 mini</h4>
-          </div>
-          <div class="wifi_subtitle">
-            <div class="icon">
-              <img src="./assets/img/iptv.svg" alt="" />
-            </div>
-            <div class="price">
-              <h3>299 TJS</h3>
-            </div>
-            <div class="btn">
-              <button>Подробнее</button>
+            <div class="text text_2">
+              <h3>Техническая поддержка.</h3>
+              <p>
+                Для бесперебойного предоставления услуг у нас работают аварийные
+                бригады, тем самым обеспечивая круглосуточную тех.поддержку. Мы на
+                связи 24/7.
+              </p>
             </div>
           </div>
-        </div>
-        <div class="wifi_block">
-          <div class="wifi_title">
-            <h3>GPON</h3>
-            <h4>SNR-ONU-GPON-1G-mini-C+</h4>
-          </div>
-          <div class="wifi_subtitle">
-            <div class="icon">
-              <img src="./assets/img/gpon.svg" alt="" />
-            </div>
-            <div class="price">
-              <h3>299 TJS</h3>
-            </div>
-            <div class="btn">
-              <button>Подробнее</button>
-            </div>
-          </div>
-        </div>
-        <div class="wifi_block">
-          <div class="wifi_title">
-            <h3>GPON</h3>
-            <h4>SNR-ONU-GPON-1G-mini-C+</h4>
-          </div>
-          <div class="wifi_subtitle">
-            <div class="icon">
-              <img src="./assets/img/gpon.svg" alt="" />
-            </div>
-            <div class="price">
-              <h3>299 TJS</h3>
-            </div>
-            <div class="btn">
-              <button>Подробнее</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="channelList__container" id="channelList">
-      <h1>Список каналов</h1>
-      <div class="channel__container">
-        <div class="allList">
-          <div class="allList_items">
-            <img src="./assets/img/allChannels/allChannels.svg" alt="" />
-            <h3>Все каналы</h3>
-          </div>
-          <div class="allList_items">
-            <img src="./assets/img/allChannels/tajik_icon.svg" alt="" />
-            <h3>Таджикские</h3>
-          </div>
-          <div class="allList_items">
-            <img src="./assets/img/allChannels/movie.svg" alt="" />
-            <h3>Кино</h3>
-          </div>
-          <div class="allList_items">
-            <img src="./assets/img/allChannels/child.svg" alt="" />
-            <h3>Детские</h3>
-          </div>
-          <div class="allList_items">
-            <img src="./assets/img/allChannels/sport.svg" alt="" />
-            <h3>Спортивные</h3>
-          </div>
-          <div class="allList_items">
-            <img src="./assets/img/allChannels/cognitive.svg" alt="" />
-            <h3>Познавательные</h3>
-          </div>
-          <div class="allList_items">
-            <img src="./assets/img/allChannels/tabler_ballon.svg" alt="" />
-            <h3>Развлекательные</h3>
-          </div>
-        </div>
-        <div class="allChannels">
-          <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
-          <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
-          <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
-          <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
-          <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
-          <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
-          <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
-          <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
-          <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
-          <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
-          <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
-          <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
-          <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
-          <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
-          <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
-          <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
-          <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
-          <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
-          <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
-          <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
-          <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
-          <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
-          <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
-          <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
-          <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
-          <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
-          <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
-          <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
-          <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
-          <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
-          <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
-          <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
-          <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
-          <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
-          <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
-          <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
-          <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
-          <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
-          <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
-          <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
-          <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
-          <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
-          <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
-          <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
-          <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
-          <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
-          <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
-          <img src="./assets/img/allChannels__name/tnt.svg" alt="" />
-        </div>
-      </div>
-    </div>
-
-    <div class="benifits__container">
-      <div class="benifits__title">
-        <div class="title">
-          <h1>
-            НАШИ <br /> ПРЕИМУЩЕСТВА
-          </h1>
-        </div>
-      </div>
-      <div class="eazyPayment">
-        <div class="eazy_title">
-          <div class="text">
-            <h3>Доступные цены и удобная оплата.</h3>
-            <p>
-              Оптимальная ценовая политика, которая полностью соответствует
-              Вашим требованиям и желаниям. Для более удобной работы мы
-              предоставляем нашим клиентам несколько способов оплаты услуг :
-              Онлайн и в терминалах по городу.
-            </p>
-          </div>
-          <div class="icon">
-            <img src="./assets/img/star.svg" alt="" />
+          <div class="eazy_image">
             <img src="./assets/img/nets_w.svg" alt="" />
           </div>
-          <div class="text text_2">
-            <h3>Техническая поддержка.</h3>
-            <p>
-              Для бесперебойного предоставления услуг у нас работают аварийные
-              бригады, тем самым обеспечивая круглосуточную тех.поддержку. Мы на
-              связи 24/7.
-            </p>
-          </div>
-        </div>
-        <div class="eazy_image">
-          <img src="./assets/img/nets_w.svg" alt="" />
-        </div>
-        <div class="eazy_text">
-          <div class="text">
-            <h3>Абсолютно безлимитный интернет</h3>
-            <p>
-              Стабильный интернет-сигнал, обеспечивающий безопасность передачи
-              Ваших данных: посещение как внешних так и внутренних ресурсов,
-              проведение операций в онлайн-банке, и многое другое. Безлимитные
-              тарифы дадут Вам безграничный доступ ко всем возможностям
-              интернета от развлечений, до работы.
-            </p>
+          <div class="eazy_text">
+            <div class="text">
+              <h3>Абсолютно безлимитный интернет</h3>
+              <p>
+                Стабильный интернет-сигнал, обеспечивающий безопасность передачи
+                Ваших данных: посещение как внешних так и внутренних ресурсов,
+                проведение операций в онлайн-банке, и многое другое. Безлимитные
+                тарифы дадут Вам безграничный доступ ко всем возможностям
+                интернета от развлечений, до работы.
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </div> 
+    <app-footer></app-footer>
   </div> 
-  <app-footer></app-footer>
-</div> 
