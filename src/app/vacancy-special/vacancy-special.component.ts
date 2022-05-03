@@ -8,6 +8,8 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class VacancySpecialComponent implements OnInit {
   vacancyAddForm!:FormGroup
+  letterAddForm!: FormGroup
+
   modalShow = false
   constructor() { }
 
@@ -19,12 +21,16 @@ export class VacancySpecialComponent implements OnInit {
       tel: new FormControl('', Validators.required),
       email: new FormControl('', Validators.required),
     })
-
+    this.letterAddForm = new FormGroup({
+      letter: new FormControl('',Validators.required)
+    })
   }
 
   send(){
     const vacancyAddFormData = {...this.vacancyAddForm.value}
     console.log(vacancyAddFormData)
+    const letterAddFormData = {...this.letterAddForm.value}
+    console.log(letterAddFormData)
 
   }
 

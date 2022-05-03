@@ -134,6 +134,8 @@
           margin: auto;
           input{
             position: absolute;
+            opacity: 0;
+            cursor: pointer;
           }
         }
       }
