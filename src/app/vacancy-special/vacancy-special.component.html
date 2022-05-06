@@ -5,7 +5,7 @@
   <div class="modal__block">
     <h1>ВАШ ОТКЛИК</h1>
     <h2>ТЫ ОТКЛИКАЕШЬСЯ НА ВАКАНСИЮ</h2>
-    <h2>Юрист</h2>
+    <h2>{{ fullVacancyData.title }}</h2>
     <h3>Контактная информация:</h3>
     <div class="block_input">
       <form action="" [formGroup]="vacancyAddForm">
@@ -45,15 +45,15 @@
     <app-header></app-header>
     <div class="type_page">
     <h2 routerLink="/vacancy">Вакансии</h2>
-    <h3>\ Специалист по подключениям</h3>
+    <h3>\ {{ fullVacancyData.title }}</h3>
   </div>
   <div class="special_container">
     <div class="icon">
-      <img src="./assets/img/vacancy.svg" alt="" />
+      <img [src]="fullVacancyData.img" alt="" />
       <button (click)="modalShow = true">Отправить CV</button>
     </div>
     <div class="text">
-      <h1>Специалист по подключениям</h1>
+      <h1>{{ fullVacancyData.title }}</h1>
       <div class="insideText">
         <h2>Что нужно делать:</h2>
         <ul>
