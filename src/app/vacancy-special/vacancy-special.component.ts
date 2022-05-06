@@ -25,8 +25,8 @@ export class VacancySpecialComponent implements OnInit {
     this.vacancyAddForm = new FormGroup({
       surname: new FormControl('', Validators.required),
       name: new FormControl('', Validators.required),
-      dadname: new FormControl('', Validators.required),
-      tel: new FormControl('', Validators.required),
+      secondName: new FormControl('', Validators.required),
+      phone: new FormControl('', Validators.required),
       email: new FormControl('', Validators.required),
     })
     this.letterAddForm = new FormGroup({

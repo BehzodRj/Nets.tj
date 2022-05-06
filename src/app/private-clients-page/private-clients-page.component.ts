@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-private-clients-page',
@@ -14,12 +14,28 @@ export class PrivateClientsPageComponent implements OnInit {
     {id: 4, name: 'Nets 4', speed: 'Скорость до 20 Mbit/s', price: '375', li_1: 'Оборудование в аренду', li_2: 'Бесплатное IPTV в подарок на 2 месяц', li_3: 'Бесплатное подключение', li_4: 'Безлимитный трафик', li_5: 'Доступ к локальным ресурсам до 100мбит'},
   ]
   tarifsName: any
+  connectionForm!: FormGroup
   showModalConnection = false
   clrTech = 0
 
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.connectionForm = new FormGroup({
+      surname: new FormControl('', Validators.required),
+      name: new FormControl('', Validators.required),
+      secondName: new FormControl('', Validators.required),
+      phone: new FormControl('', Validators.required),
+      address: new FormControl('', Validators.required),
+      comments: new FormControl('', Validators.required)
+
+    })
+    
+  }
+  submit(){
+      const connectionFormData = {...this.connectionForm.value}
+      console.log(connectionFormData)
+  }
 
   connectionTarifs(id: number) {
     this.showModalConnection = true

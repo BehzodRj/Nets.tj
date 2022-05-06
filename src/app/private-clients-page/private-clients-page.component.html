@@ -9,12 +9,12 @@
   
       <div class="conection_contacts">
         <h1>Контактная информация:</h1>
-        <form class="connection_information">
-          <input type="text" placeholder="Фамилия" />
-          <input type="text" placeholder="Имя" />
-          <input type="text" placeholder="Отчество" />
-          <input type="number" placeholder="Телефон" />
-          <input type="text" placeholder="Адресс" />
+        <form class="connection_information" [formGroup]="connectionForm">
+          <input type="text" placeholder="Фамилия" formControlName="surname" />
+          <input type="text" placeholder="Имя" formControlName="name" />
+          <input type="text" placeholder="Отчество" formControlName="secondName" />
+          <input type="number" placeholder="Телефон" formControlName="phone" />
+          <input type="text" placeholder="Адресс" formControlName="address"/>
         </form>
       </div>
   
@@ -44,9 +44,9 @@
   
       <div class="conection_comment">
         <h1>Комментарий <span>(необязятельно)</span>:</h1>
-        <form class="connection_textarea">
+        <form class="connection_textarea" [formGroup]="connectionForm">
           <textarea
-            placeholder="Напиши здесь, напиши что-нибудь. можешь не писать. "
+            placeholder="Напиши здесь, напиши что-нибудь. можешь не писать. " formControlName="comments"
           ></textarea>
         </form>
       </div>
@@ -70,7 +70,7 @@
       </div>
   
       <div class="conection_button">
-        <button>Отправить</button>
+      <button (click)="submit()" [disabled]="connectionForm.invalid">Отправить</button>
       </div>
     </div>
   </div>  
