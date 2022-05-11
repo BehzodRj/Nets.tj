@@ -246,8 +246,7 @@
     }
 
     .tarifs__container {
-      width: 90%;
-      margin: 30px auto;
+      width: 100%;
 
       h1 {
         text-align: center;
@@ -410,8 +409,7 @@
     }
 
     .Equipment__container {
-      width: 90%;
-      margin: 30px auto;
+      width: 100%;
 
       h1 {
         text-align: center;
@@ -546,8 +544,7 @@
     }
 
     .channelList__container {
-      width: 90%;
-      margin: 30px auto;
+      width: 100%;
 
       h1 {
         text-align: center;
@@ -567,9 +564,9 @@
         margin-top: 30px;
 
         .allList {
-          width: 35%;
+          width: 500px;
           height: 100%;
-          margin-right: 20px;
+          margin-right: 31px;
           border: 1px solid #FFFFFF;
           border-radius: 30px;
 
@@ -605,18 +602,32 @@
 
         .allChannels {
           display: flex;
-          justify-content: center;
           flex-wrap: wrap;
           align-items: center;
-          width: 80%;
+          width: 81%;
           height: 100%;
           overflow-y: scroll;
-          padding: 0 10px;
 
           img {
             width: 150px;
             margin-right: 20px;
             margin-bottom: 20px;
+          }
+
+              /* width */
+          &::-webkit-scrollbar {
+            width: 13px;
+          }
+          
+          /* Handle */
+          &::-webkit-scrollbar-thumb {
+            background: #EA3E2A;
+            border-radius: 25px;
+          }
+          
+          /* Handle on hover */
+          &::-webkit-scrollbar-thumb:hover {
+            background: #d35555;
           }
         }
 
@@ -885,5 +896,18 @@
         }
       }
     }
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .nets_block, .wifi_block {
+    margin: 10px;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .nets__container, .wifi__container, .channel__container {
+    width: auto !important;
+    margin: 0 20px;
   }
 }

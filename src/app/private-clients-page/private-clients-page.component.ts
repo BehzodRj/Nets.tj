@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-private-clients-page',
@@ -17,7 +16,7 @@ export class PrivateClientsPageComponent implements OnInit {
   showModalConnection = false
   clrTech = 0
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {}
 

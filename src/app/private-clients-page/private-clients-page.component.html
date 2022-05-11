@@ -1,85 +1,73 @@
 <div class="modal_conection-container" *ngIf="showModalConnection == true">
-    <i class="fas fa-times fa-2x" (click)="showModalConnection = false"></i>
-    <div class="modal_conection-block">
-      <h1 class="title">ВАШ ОТКЛИК</h1>
-      <div class="conection_title">
-        <h1>ТЫ ПОДКЛЮЧАЕШЬ ТАРИФ</h1>
-        <h2>{{ tarifsName | uppercase }}</h2>
-      </div>
-  
-      <div class="conection_contacts">
-        <h1>Контактная информация:</h1>
-        <form class="connection_information">
-          <input type="text" placeholder="Фамилия" />
-          <input type="text" placeholder="Имя" />
-          <input type="text" placeholder="Отчество" />
-          <input type="number" placeholder="Телефон" />
-          <input type="text" placeholder="Адресс" />
-        </form>
-      </div>
-  
-      <div class="conection_technical">
-        <h1>Технология подключения:</h1>
-        <div class="connection_button">
-          <input
-            type="submit"
-            [ngStyle]="{ background: clrTech == 1 ? '#EA3E2A' : '#202020' }"
-            value="GPON"
-            (click)="gpon($event)"
-          />
-          <input
-            type="submit"
-            [ngStyle]="{ background: clrTech == 2 ? '#EA3E2A' : '#202020' }"
-            value="Ethernet"
-            (click)="ethernet($event)"
-          />
-          <input
-            type="submit"
-            [ngStyle]="{ background: clrTech == 3 ? '#EA3E2A' : '#202020' }"
-            value="Антенна"
-            (click)="antenna($event)"
-          />
-        </div>
-      </div>
-  
-      <div class="conection_comment">
-        <h1>Комментарий <span>(необязятельно)</span>:</h1>
-        <form class="connection_textarea">
-          <textarea
-            placeholder="Напиши здесь, напиши что-нибудь. можешь не писать. "
-          ></textarea>
-        </form>
-      </div>
-  
-      <div class="conection_photo">
-        <h1 class="title">Фотография паспорта:</h1>
-        <div class="connection_passport">
-          <h1>Перетащи фото сюда или выбери из папки</h1>
-          <div class="connection_choose">
-            <input type="file" />
-            <h2>Выбрать</h2>
-          </div>
-        </div>
-      </div>
-  
-      <div class="conection_private">
-        <h1>
-          Отправляя Заявку, я соглашаюсь на обработку
-          <span>моих персональных данных</span>
-        </h1>
-      </div>
-  
-      <div class="conection_button">
-        <button>Отправить</button>
+  <i class="fas fa-times fa-2x" (click)="showModalConnection = false"></i>
+  <div class="modal_conection-block">
+    <h1 class="title">ВАШ ОТКЛИК</h1>
+    <div class="conection_title">
+      <h1>ТЫ ПОДКЛЮЧАЕШЬ ТАРИФ</h1>
+      <h2>{{ tarifsName | uppercase }}</h2>
+    </div>
+
+    <div class="conection_contacts">
+      <h1>Контактная информация:</h1>
+      <form class="connection_information">
+        <input type="text" placeholder="Фамилия" />
+        <input type="text" placeholder="Имя" />
+        <input type="text" placeholder="Отчество" />
+        <input type="number" placeholder="Телефон" />
+        <input type="text" placeholder="Адресс" />
+      </form>
+    </div>
+
+    <div class="conection_technical">
+      <h1>Технология подключения:</h1>
+      <div class="connection_button">
+        <input type="submit" [ngStyle]="{ background: clrTech == 1 ? '#EA3E2A' : '#202020' }" value="GPON"
+          (click)="gpon($event)" />
+        <input type="submit" [ngStyle]="{ background: clrTech == 2 ? '#EA3E2A' : '#202020' }" value="Ethernet"
+          (click)="ethernet($event)" />
+        <input type="submit" [ngStyle]="{ background: clrTech == 3 ? '#EA3E2A' : '#202020' }" value="Антенна"
+          (click)="antenna($event)" />
       </div>
     </div>
-  </div>  
-  <div class="container" *ngIf="showModalConnection == false">
-    <app-header></app-header>
-    <div class="container__page">
-      <div class="image__container">
-        <img src="./assets/img/nets_image.svg" alt="" />
+
+    <div class="conection_comment">
+      <h1>Комментарий <span>(необязятельно)</span>:</h1>
+      <form class="connection_textarea">
+        <textarea placeholder="Напиши здесь, напиши что-нибудь. можешь не писать. "></textarea>
+      </form>
+    </div>
+
+    <div class="conection_photo">
+      <h1 class="title">Фотография паспорта:</h1>
+      <div class="connection_passport">
+        <h1>Перетащи фото сюда или выбери из папки</h1>
+        <div class="connection_choose">
+          <input type="file" />
+          <h2>Выбрать</h2>
+        </div>
       </div>
+    </div>
+
+    <div class="conection_private">
+      <h1>
+        Отправляя Заявку, я соглашаюсь на обработку
+        <span>моих персональных данных</span>
+      </h1>
+    </div>
+
+    <div class="conection_button">
+      <button>Отправить</button>
+    </div>
+  </div>
+</div>
+<div class="container" *ngIf="showModalConnection == false">
+  <app-header></app-header>
+  <div class="container__page">
+    <div class="image__container">
+      <img src="./assets/img/nets_image.svg" alt="" />
+    </div>
+
+    <div class="container_private" style="max-width: 1500px; margin: auto;">
       <div class="tarifs__container" id="tarifs">
         <h1>Тарифы</h1>
         <div class="nets__container">
@@ -284,7 +272,7 @@
           </div>
         </div>
       </div>
-  
+
       <div class="benifits__container">
         <div class="benifits__title">
           <div class="title">
@@ -334,6 +322,7 @@
           </div>
         </div>
       </div>
-    </div> 
-    <app-footer></app-footer>
-  </div> 
+    </div>
+  </div>
+  <app-footer></app-footer>
+</div>

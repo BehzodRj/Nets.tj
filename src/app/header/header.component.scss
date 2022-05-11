@@ -2,11 +2,13 @@
   width: 100%;
   margin: auto;
   border-bottom: 1px solid #7E7E7F;
+  padding: 10px 0;
+
   .header__link {
     display: flex;
-    width: 90%;
-    padding: 5px 0;
+    width: 100%;
     margin: auto;
+    max-width: 1500px;
 
     h3 {
       font-family: 'Raleway', sans-serif;
@@ -33,17 +35,19 @@
 
 .header__subtitle { 
   .header__container { 
+    max-width: 1530px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 90%;
+    width: 100%;
     margin: auto;
-    position: fixed; 
+    position: fixed;
     top: 50px;
     right: 0;
     left: 0;
     z-index: 99;
-    background: rgba(0,0,0, .6);
+    background: rgba(0, 0, 0, 0.6);
+
     @media screen and (max-width:600px) {
       top: 0;
     }
